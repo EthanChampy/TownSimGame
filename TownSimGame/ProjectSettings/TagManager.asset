@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - FishingSpot
+  - DayAdvancer
   layers:
   - Default
   - TransparentFX
