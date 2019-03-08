@@ -4,12 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
-  - FishingSpot
-  - DayAdvancer
-=======
   - Tree
->>>>>>> Josh
+  - DayAdvancer
+  - FishingSpot
+  - Lumber Yard
   layers:
   - Default
   - TransparentFX
@@ -19,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
+  - 
   - 
   - 
   - 

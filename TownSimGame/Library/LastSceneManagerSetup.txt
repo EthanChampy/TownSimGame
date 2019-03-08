@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/EthanScene.unity
-=======
-- path: Assets/Josh Assets/Scenes/Wood.unity
->>>>>>> Josh
+- path: Assets/Scenes/FirstMergeScene.unity
   isLoaded: 1
   isActive: 1
