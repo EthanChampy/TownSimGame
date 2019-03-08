@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/EthanScene.unity
+=======
+- path: Assets/Josh Assets/Scenes/Wood.unity
+>>>>>>> Josh
   isLoaded: 1
   isActive: 1
