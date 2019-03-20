@@ -636,6 +636,67 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &396258026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 396258027}
+  - component: {fileID: 396258029}
+  - component: {fileID: 396258028}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &396258027
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396258026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0.056}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 402802768}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &396258028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396258026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32bcffaf6a7ef8f449e490d6cb43039a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Freddy
+  sentences:
+  - Yo! I'm Freddy!
+  DiaManager: {fileID: 1702523717}
+--- !u!65 &396258029
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396258026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.26, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &402802768 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400016, guid: 71a2e3f0b7d66314498ea33019337b2f, type: 3}
+  m_PrefabInternal: {fileID: 970438380}
 --- !u!1 &457322530
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,31 +1499,31 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400016, guid: 71a2e3f0b7d66314498ea33019337b2f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.75616
+      value: -5.58
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 71a2e3f0b7d66314498ea33019337b2f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.003
+      value: 0.003000021
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 71a2e3f0b7d66314498ea33019337b2f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.0520458
+      value: -1.45
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 71a2e3f0b7d66314498ea33019337b2f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 71a2e3f0b7d66314498ea33019337b2f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.26607406
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 71a2e3f0b7d66314498ea33019337b2f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 71a2e3f0b7d66314498ea33019337b2f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.96395266
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 71a2e3f0b7d66314498ea33019337b2f, type: 3}
       propertyPath: m_RootOrder
@@ -1484,6 +1545,34 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ce14a7e629bd6af41916c9d61d82cdbd, type: 2}
+    - target: {fileID: 13700006, guid: 71a2e3f0b7d66314498ea33019337b2f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c173c79f08032744892e847c65228b8, type: 2}
+    - target: {fileID: 13700004, guid: 71a2e3f0b7d66314498ea33019337b2f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c173c79f08032744892e847c65228b8, type: 2}
+    - target: {fileID: 13700002, guid: 71a2e3f0b7d66314498ea33019337b2f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c173c79f08032744892e847c65228b8, type: 2}
+    - target: {fileID: 13700010, guid: 71a2e3f0b7d66314498ea33019337b2f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c173c79f08032744892e847c65228b8, type: 2}
+    - target: {fileID: 13700008, guid: 71a2e3f0b7d66314498ea33019337b2f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c173c79f08032744892e847c65228b8, type: 2}
+    - target: {fileID: 13700000, guid: 71a2e3f0b7d66314498ea33019337b2f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c173c79f08032744892e847c65228b8, type: 2}
+    - target: {fileID: 400016, guid: 71a2e3f0b7d66314498ea33019337b2f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 30.862001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 71a2e3f0b7d66314498ea33019337b2f, type: 3}
   m_IsPrefabParent: 0
@@ -2788,12 +2877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08940b750705dac4ebee6c69ddb6c9a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Fox McGroove
-    sentences:
-    - HEY!!
-    - WHO DO YA THINK YOU'RE TALKING TO!?
-    - THE NAME'S FOX MCGROOVE, THE MOST JAMMIN' FOX IN THE WEST!!
+  dialogue: {fileID: 0}
 --- !u!114 &2007447652
 MonoBehaviour:
   m_ObjectHideFlags: 0
