@@ -23,7 +23,7 @@ public class e_dialogue : MonoBehaviour
         if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
         {
 
-            DiaManager.GetComponent<e_dialogueManager>().Invoke("StartDialogue", 0f);
+            this.gameObject.GetComponent<e_NPC>().Invoke("TriggerDialogue", 0f);
         }
     }
 }
