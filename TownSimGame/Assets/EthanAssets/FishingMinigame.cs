@@ -30,11 +30,14 @@ public class FishingMinigame : MonoBehaviour {
     public int Score = 0;
     public int FailScore = 0;
 
+    public Rigidbody PlayerRigid;
+
 
 	// Use this for initialization
 	void Start ()
     {
         Player = GameObject.Find("Player");
+        PlayerRigid = this.gameObject.GetComponent<Rigidbody>();
         FishCount.text = "Tiny fish: " + TinyFish + "   " + "Small fish: " + SmallFish + "   " + "Medium fish: " + Fish + "   " + "Big fish: " + BigFish + "   " + "Huge fish: " + HugeFish;
     }
 	
@@ -126,6 +129,8 @@ public class FishingMinigame : MonoBehaviour {
         {
             Fishing = true;
             Player.gameObject.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().enabled = false;
+            PlayerRigid.velocity = new Vector3 (0f,0f,0f);
+            PlayerRigid.angularVelocity = new Vector3(0, 0, 0);
             Invoke("HookTimer", Random.Range(3f, 8f));
         }
     }
