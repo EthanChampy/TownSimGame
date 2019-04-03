@@ -8,6 +8,7 @@ public class PlayerControls : MonoBehaviour {
     float rotspeed = 80;
     float rot = 0f;
     float gravity = 8;
+    float useless = 0;
 
     Vector3 moveDir = Vector3.zero;
 
