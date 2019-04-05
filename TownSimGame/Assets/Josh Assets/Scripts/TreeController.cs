@@ -11,6 +11,7 @@ public class TreeController : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        this.gameObject.transform.Rotate(0, Random.Range(1, 360), 0, Space.Self);
         TreeValue = Random.Range(3, 10);
     }
 	
