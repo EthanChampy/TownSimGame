@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 136952807106750830}
   m_Layer: 0
   m_Name: LumberYard
-  m_TagString: Untagged
+  m_TagString: Lumber Yard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
