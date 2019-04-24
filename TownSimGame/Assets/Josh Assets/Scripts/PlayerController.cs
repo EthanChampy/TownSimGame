@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour {
 
     // Inventory
+    public int[] Inventory;
+    int CurrentInvent = 0;
     int MaxInvent = 20;
+
     int PlayerWood = 0;
 
     // Gold
@@ -18,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 
     // UI
     public GameObject InventoryPanel;
+    public Text[] InventorySlots = new Text[20];
     public Text Gold;
     public Text Wood;
     public GameObject PromptPanel;
@@ -26,6 +30,10 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        Inventory = new int[MaxInvent];
+
+
+
         InventoryPanel.SetActive(false);
         PromptPanel.SetActive(false);
 
@@ -35,7 +43,10 @@ public class PlayerController : MonoBehaviour {
 	void Update ()
     {
         Interaction();
+
+        SortInventory();
         DisplayInvent();
+
         Gold.text = "Gold: " + PlayerGold;
 
 
@@ -111,9 +122,10 @@ public class PlayerController : MonoBehaviour {
 
     void AddItemToInventory(int Item)
     {
-        if (Item == 0)
+        if (CurrentInvent < MaxInvent)
         {
-            PlayerWood++;
+            Inventory[CurrentInvent] = Item;
+            CurrentInvent++;
         }
     }
 
@@ -128,7 +140,66 @@ public class PlayerController : MonoBehaviour {
             InventoryPanel.SetActive(false);
         }
 
-        Wood.text = "Wood: " + PlayerWood;
+        int counter = 0;
+
+        foreach (Text Slot in InventorySlots)
+        {
+
+            Slot.text = (counter + 1) + ". " + GetLootName(Inventory[counter]);
+            counter++;
+        }
+    }
+
+    string GetLootName(int LootID)
+    {
+        string Name = "";
+
+        switch (LootID)
+        {
+            case 1:
+                Name = "Wood";
+                break;
+            case 2:
+                Name = "Fish";
+                break;
+            case 3:
+                Name = "Monster Guts";
+                break;
+            case 4:
+                Name = "Monster Flesh";
+                break;
+            case 5:
+                Name = "Monster Brain";
+                break;
+        }
+
+        return Name;
+    }
+
+    void SortInventory()
+    {
+        int counter = 0;
+
+        while (counter <= 19)
+        {
+            if (counter != 0)
+            {
+                if (Inventory[counter - 1] == 0)
+                {
+                    Inventory[counter - 1] = Inventory[counter];
+                    Inventory[counter] = 0;
+                }
+            }
+            counter++;
+        }
+    }
+
+    void AddToInventory(int LootID)
+    {
+        if (Inventory[19] != 0)
+        {
+            Inventory[19] = LootID;
+        }
     }
 
 }
