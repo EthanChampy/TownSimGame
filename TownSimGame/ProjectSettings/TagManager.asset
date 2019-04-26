@@ -8,6 +8,8 @@ TagManager:
   - DayAdvancer
   - FishingSpot
   - Lumber Yard
+  - FightingEnter
+  - Punch
   layers:
   - Default
   - TransparentFX

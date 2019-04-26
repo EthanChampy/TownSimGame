@@ -36,7 +36,7 @@ public class FishingMinigame : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        Player = GameObject.Find("Player");
+        Player = GameObject.Find("Playar");
         PlayerRigid = this.gameObject.GetComponent<Rigidbody>();
         FishCount.text = "Tiny fish: " + TinyFish + "   " + "Small fish: " + SmallFish + "   " + "Medium fish: " + Fish + "   " + "Big fish: " + BigFish + "   " + "Huge fish: " + HugeFish;
     }
@@ -128,7 +128,8 @@ public class FishingMinigame : MonoBehaviour {
         if (collision.gameObject.tag == "FishingSpot" && Input.GetKeyDown(KeyCode.E) && Fishing == false)
         {
             Fishing = true;
-            Player.gameObject.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().enabled = false;
+            Player.gameObject.GetComponent<PlayerControls>().speed = 0;
+            Player.gameObject.GetComponent<PlayerControls>().rotspeed = 0;
             PlayerRigid.velocity = new Vector3 (0f,0f,0f);
             PlayerRigid.angularVelocity = new Vector3(0, 0, 0);
             Invoke("HookTimer", Random.Range(3f, 8f));
@@ -168,7 +169,8 @@ public class FishingMinigame : MonoBehaviour {
         TimerText.enabled = false;
         Success.enabled = false;
         Fails.enabled = false;
-        Player.gameObject.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().enabled = true;
+        Player.gameObject.GetComponent<PlayerControls>().speed = 4;
+        Player.gameObject.GetComponent<PlayerControls>().rotspeed = 80;
     }
 
     void KeycodeRandomiser()

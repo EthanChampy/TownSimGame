@@ -5,15 +5,22 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour {
 
     public float speed = 4;
-    float rotspeed = 80;
+    public float rotspeed = 140;
     float rot = 0f;
     float gravity = 8;
     float useless = 0;
+
+    public GameObject PunchBox;
 
     Vector3 moveDir = Vector3.zero;
 
     public CharacterController Cont;
     public Animator anim;
+
+    void Start()
+    {
+        PunchBox = GameObject.Find("PunchBox");
+    }
 
     void Update()
     {
