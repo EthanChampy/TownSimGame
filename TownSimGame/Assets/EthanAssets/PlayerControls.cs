@@ -10,7 +10,10 @@ public class PlayerControls : MonoBehaviour {
     float gravity = 8;
     float useless = 0;
 
+    public int GG = 1;
+
     public GameObject PunchBox;
+    public GameObject Player;
 
     Vector3 moveDir = Vector3.zero;
 
@@ -20,12 +23,20 @@ public class PlayerControls : MonoBehaviour {
     void Start()
     {
         PunchBox = GameObject.Find("PunchBox");
+        Player = GameObject.Find("Playar");
     }
 
     void Update()
     {
         Movement();
         GetInput();
+
+        if (GG == 0)
+        {
+            this.gameObject.GetComponent<FightingGameTP>().Fighting = false;
+            this.gameObject.transform.position = new Vector3(30, 10, 70);
+            GG = 1;
+        }
     }
 
     void Movement()
@@ -93,5 +104,12 @@ public class PlayerControls : MonoBehaviour {
         anim.SetInteger("Condition", 0);
         anim.SetBool("Attacking", false);
     }
-	
+
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.tag == "Zombie")
+        {
+            GG = 0;
+        }
+    }
 }

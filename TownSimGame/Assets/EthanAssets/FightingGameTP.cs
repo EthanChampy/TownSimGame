@@ -24,7 +24,7 @@ public class FightingGameTP : MonoBehaviour {
         {
             if (Fighting == true)
             {
-                Instantiate(Zombie, new Vector3(55.09f, 10.16f, 80.16f), Quaternion.identity);
+                Instantiate(Zombie, new Vector3(55.09f, 10f, (80.16f + Random.Range(-3,3))), Quaternion.identity);
             }
             SpawnTime = Random.Range(6f, 8f);
         }

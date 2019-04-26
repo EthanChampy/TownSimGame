@@ -10,6 +10,7 @@ TagManager:
   - Lumber Yard
   - FightingEnter
   - Punch
+  - Zombie
   layers:
   - Default
   - TransparentFX
