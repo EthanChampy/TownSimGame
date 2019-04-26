@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Josh Assets/Scenes/Island.unity
+- path: Assets/Josh Assets/Scenes/Canvas Scene.unity
   isLoaded: 1
   isActive: 1
