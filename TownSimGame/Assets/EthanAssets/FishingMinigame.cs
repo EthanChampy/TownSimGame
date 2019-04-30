@@ -14,6 +14,7 @@ public class FishingMinigame : MonoBehaviour {
     public bool Fishing = false;
     public bool FishingMinigameStart = false;
     GameObject Player;
+    
     public Text Hooked;
     public Text FishingButtonUI;
     public Text TimerText;
@@ -38,7 +39,6 @@ public class FishingMinigame : MonoBehaviour {
     {
         Player = GameObject.Find("Playar");
         PlayerRigid = this.gameObject.GetComponent<Rigidbody>();
-        FishCount.text = "Tiny fish: " + TinyFish + "   " + "Small fish: " + SmallFish + "   " + "Medium fish: " + Fish + "   " + "Big fish: " + BigFish + "   " + "Huge fish: " + HugeFish;
     }
 	
 	// Update is called once per frame
@@ -110,7 +110,6 @@ public class FishingMinigame : MonoBehaviour {
                         Debug.Log("We're gonna need a bigger boat...");
                         break;
                 }
-                FishCount.text = "Tiny fish: " + TinyFish + "   " + "Small fish: " + SmallFish + "   " + "Medium fish: " + Fish + "   " + "Big fish: " + BigFish + "   " + "Huge fish: " + HugeFish;
                 Invoke("FishingMinigameEnd", 0f);       
             }
 
@@ -149,7 +148,7 @@ public class FishingMinigame : MonoBehaviour {
     void FishingMiniGameUI()
     {
         KeycodeRandomBool = true;
-        Hooked.enabled = false;
+        Hooked.enabled = false;     
         FishingButtonUI.enabled = true;
         TimerText.enabled = true;
         Success.enabled = true;
@@ -170,7 +169,7 @@ public class FishingMinigame : MonoBehaviour {
         Success.enabled = false;
         Fails.enabled = false;
         Player.gameObject.GetComponent<PlayerControls>().speed = 4;
-        Player.gameObject.GetComponent<PlayerControls>().rotspeed = 80;
+        Player.gameObject.GetComponent<PlayerControls>().rotspeed = 140;
     }
 
     void KeycodeRandomiser()

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class e_dialogueManager : MonoBehaviour
 {
+
+    public GameObject Player;
     public Text nameText;
     public Text dialogueText;
 
@@ -15,6 +17,7 @@ public class e_dialogueManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Player = GameObject.Find("Playar");
         sentences = new Queue<string>();
     }
 
@@ -23,6 +26,9 @@ public class e_dialogueManager : MonoBehaviour
     {
         animator.SetBool("IsOpen", true);
         nameText.text = dialogue.name;
+
+        Player.gameObject.GetComponent<PlayerControls>().speed = 0;
+        Player.gameObject.GetComponent<PlayerControls>().rotspeed = 0;
 
         sentences.Clear();
 
@@ -59,6 +65,8 @@ public class e_dialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
+        Player.gameObject.GetComponent<PlayerControls>().speed = 4;
+        Player.gameObject.GetComponent<PlayerControls>().rotspeed = 140;
         animator.SetBool("IsOpen", false);
     }
 }
